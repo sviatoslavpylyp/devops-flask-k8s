@@ -8,10 +8,15 @@ spec:
   source:
     repoURL: https://github.com/sviatoslavpylyp/devops-flask-k8s.git
     targetRevision: HEAD
-    path: ./envs/prod
+    path: ./argo
   destination:
     server: https://kubernetes.default.svc
     namespace: default
   syncPolicy:
     automated: 
       prune: true
+      selfHeal: true
+      allowEmpty: false
+    syncOptions:
+    - Replace=true
+    - CreateNamespace=false
