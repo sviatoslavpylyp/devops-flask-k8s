@@ -6,15 +6,16 @@ metadata:
   annotations:
     eks.amazonaws.com/role-arn: arn:aws:iam::245582572290:role/eks-s3-access
 
+---
 
-# apiVersion: v1
-# kind: ConfigMap
-# metadata:
-#   name: rds-connect-creds
-#   namespace: default
-# data:
-#   PROD: "prod"
-#   DB_HOST: ""
-#   DB_NAME: ""
-#   DB_PORT: ""
-#   DB_USER: ""
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: rds-connect-creds
+  namespace: default
+data:
+  PROD: "prod"
+  DB_HOST: ""
+  DB_NAME: ""
+  DB_PORT: ""
+  DB_USER: ""
