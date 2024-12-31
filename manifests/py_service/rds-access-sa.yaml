@@ -6,8 +6,8 @@ metadata:
   annotations:
     eks.amazonaws.com/role-arn: arn:aws:iam::245582572290:role/eks-s3-access
 
----
 
+---
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -15,7 +15,7 @@ metadata:
   namespace: default
 data:
   PROD: "prod"
-  DB_HOST: ""
-  DB_NAME: ""
-  DB_PORT: ""
-  DB_USER: ""
+  DB_HOST: "spylyp-db.cgqtqi4cjycq.us-west-2.rds.amazonaws.com"
+  DB_NAME: "shop"
+  DB_PORT: "5432"
+  DB_USER: "postgres"
