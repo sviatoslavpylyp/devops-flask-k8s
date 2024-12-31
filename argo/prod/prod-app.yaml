@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/sviatoslavpylyp/devops-flask-k8s.git
     targetRevision: HEAD
-    path: ./argo
+    path: ./envs/prod
   destination:
     server: https://kubernetes.default.svc
     namespace: default
