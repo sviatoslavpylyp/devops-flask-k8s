@@ -4,4 +4,4 @@ metadata:
   name: fuck
 type: Opaque
 data:
-  password: <Password>
+  password: "PFBhc3N3b3JkPgo="
