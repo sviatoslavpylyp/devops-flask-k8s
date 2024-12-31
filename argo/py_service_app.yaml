@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: prod-secret
+  name: py-service
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -10,10 +10,10 @@ spec:
   source:
     repoURL: https://github.com/sviatoslavpylyp/devops-flask-k8s.git
     targetRevision: HEAD
-    path: ./envs/prod
+    path: ./manifests/py_service
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd
+    namespace: default
   syncPolicy:
     automated: 
       prune: true
@@ -22,3 +22,4 @@ spec:
     syncOptions:
     - Replace=true
     - CreateNamespace=false
+      

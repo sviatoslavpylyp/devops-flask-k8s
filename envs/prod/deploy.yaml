@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: Secret
-metadata:
-  name: fuck
-type: Opaque
-data:
-  password: "PFBhc3N3b3JkPgo="

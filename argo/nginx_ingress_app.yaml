@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: generic-app
+  name: nginx-ingress
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -13,7 +13,7 @@ spec:
     path: ./argo
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd
+    namespace: ingress
   syncPolicy:
     automated: 
       prune: true
