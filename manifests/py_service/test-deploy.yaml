@@ -19,6 +19,9 @@ spec:
         image: 245582572290.dkr.ecr.us-west-2.amazonaws.com/spylyp/py-app:9cd512240f5390037a9a62729da7541a6126c34a
         imagePullPolicy: Always
         resources:
+          requests:
+            memory: "256Mi"
+            cpu: "100m"
           limits:
             memory: "256Mi"
             cpu: "500m"
